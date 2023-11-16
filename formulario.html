@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Compra entradas</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styleCompraEntrada.css">
+	</head>
+
+	<body>
+	<header>
+		<h1>COMPRA TU ENTRADA:</h1>
+		<pre>          Lo que no 
+		te puedes      PERDER
+		        en MADRID
+			</pre>
+				
+				
+		</header>
+		<main>
+	<form action="accion.php" method="get">
+		<h3> RESERVA TU ENTRADA:</h3>
+		<fieldset>
+			
+			<p>
+				<label for="espectaculo">Tipo de espectáculo:</label>
+				<br>
+					<select name="espectaculo" id="espectaculo">
+						<option>Concierto</option>
+						<option>Teatro</option>
+						<option>Monólogo</option>
+						<option>Musical</option>
+						<option>Magia</option>
+					</select>
+				</p>
+				<p>
+					<label for="fecha">Fecha: </label>
+					<input type="date" name="fecha" id="fecha"/>
+					<label for="hora">Hora: </label>
+					<input type="time" name="hora" id="hora"/>
+				</p>
+				<p>
+					<label for="grada">Grada:</label>
+					<input type="radio" name="lugar" id="grada"/>
+					<label for="patio">Patio: </label>
+					<input type="radio" name="lugar" id="patio"/>
+					<label for="anfiteatro">Anfiteatro: </label>
+					<input type="radio" name="lugar" id="anfiteatro"/>
+					<br/>
+				</p>
+				<p>
+				<label for="nEntradas" >Número de entradas:</label>
+				<input type="number" name="nEntradas" id="nEntradas" min="1" max="10" >
+				</p>
+				<p>
+					<label for="ciudado">Localidad:</label>
+					<input type="text" id="ciudado" name="ciudado" placeholder="Lugar del concierto">
+		</p>
+					<p>
+						<label for="precios" >RANGO DE PRECIOS 20 - 2000:</label>
+						<br/>
+			20<input type="range" name="precios" id="precios" max="2000" min="20" value="20">2000<br/>
+						</p>
+						<p>
+							<label for="mayor18">SOY MAYOR DE EDAD</label>
+							<input type="checkbox" name="mayor18" id="mayor18"/>
+						</p>
+						<p>
+						<label for="esp_select">Selecciona un espectáculo:</label>
+						<select id="esp_select">
+							<optgroup label="Concierto">
+								<option>Amaral</option>
+								<option>Alanis</option>
+							</optgroup>
+							<optgroup label="Magia">
+								<option>Mago Pop</option>
+							</optgroup>
+						</select>
+					</p>
+						<p>
+						<label for="observaciones">OBSERVACIONES DE LA RESERVA:</label><br>
+						
+							<textarea name="observaciones" id="observaciones" rows="6" cols="80">
+			Deje aquí su comentario
+			
+			</textarea>
+						</p>
+						<button value="Enviar">ENVIAR</button>
+							<button type="reset">RESET</button>
+							
+		</fieldset>
+						</form>
+					</main>
+					<footer>
+						<a href="ExamenFormulario.html"><button>VOLVER</button></a>
+					</footer>
+					</body>
+</html>
