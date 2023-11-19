@@ -1,4 +1,17 @@
 
+
+<?php
+
+$modulo ='redes locales holaa '."\n" ;
+file_put_contents('materias.txt' , $modulo , FILE_APPEND);
+
+
+$f= fopen('materias.txt', 'r') ;
+$contenido= fread( $f , filesize('materias.txt') );
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,13 +20,8 @@
     <title>Document</title>
 </head>
 <body>
+
+<?= $contenido ?>
+
 </body>
-
-<?php
-
-$modulo ='redes locales holaa '."\n" ;
-file_put_contents('materias.txt' , $modulo , FILE_APPEND);
-
-?>
-
 </html>
