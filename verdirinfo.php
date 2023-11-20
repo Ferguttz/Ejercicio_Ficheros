@@ -1,3 +1,15 @@
+<?php
+
+define('DIR',getcwd()."/ficheros/");
+
+$ficheros = scandir(DIR);
+
+$ordenTam = ordenarArchivos($ficheros);
+
+?>
+
+
+<!-- Parte HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,14 +18,14 @@
     <title>Informacion_Directorio</title>
 </head>
 <body>
-    <?php
+    <?= crearTabla($ordenTam); ?>
+</body>
+</html>
+<!-- Fin Parte HTML  -->
 
-    define('DIR',getcwd()."/ficheros/");
 
-    $ficheros = scandir(DIR);
-
-    $ordenTam = ordenarArchivos($ficheros);
-
+<?php
+//------------------------------------Parte Funciones PHP-----------------------------
 
     function ordenarArchivos(&$ficheros) : array {
         //quitar '.' y '..' del array de ficheros
@@ -50,12 +62,5 @@
 
         return $resu;
     }
+?>
 
-    ?>
-
-    <!-- Parte HTML crear TABLA  -->
-    <?= crearTabla($ordenTam); ?>
-
-
-</body>
-</html>
